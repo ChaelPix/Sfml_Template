@@ -1,4 +1,5 @@
-#include  <SFML/Graphics.hpp>
+#include <SFML/Graphics.hpp>
+#include <iostream>
 
 int main()
 {
@@ -15,6 +16,13 @@ int main()
                 window.close();
             }
         }
+
+        window.clear(sf::Color::White);
+
+        if (sf::Keyboard::isKeyPressed(sf::Keyboard::D))
+            std::cout << "Hello world\n";
+
+        window.display();
     }
 
     return 0;
